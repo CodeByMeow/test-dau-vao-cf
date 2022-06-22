@@ -24,10 +24,9 @@ const App = () => {
   }
 
   const domains = Object.keys(SHORTEN_DOMAIN).map((domain, index) => {
-    const checked = index == 0 ? 'checked' : '';
   return (
     <div key={index}>
-      <input type='radio' id={domain} name='domain' checked={checked} value={domain} onChange={onSelectShortenDomain} />
+      <input type='radio' id={domain} name='domain' value={domain} onChange={onSelectShortenDomain} />
       <label htmlFor={domain}>{domain}</label>
     </div>
   )});
